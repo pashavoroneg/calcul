@@ -18,10 +18,18 @@ public class calcul {
 
 
             if (array.length > 3) {
-                System.out.println("output:");
-                throw new RuntimeException("операция не совпадает с заданием ");
+                 System.out.println("output:");
+                   throw new RuntimeException("операция не совпадает с заданием ");
             }
-            try {
+
+        if (z < 1 || z > 10 || c < 1 || c > 10) {
+            System.out.println("Output:");
+            throw new RuntimeException("Калькулятор может принимать на вход числа от 1 до 10 включительно");
+        }
+
+
+
+        try {
 
                 if (array[1].equals("+")) {
                     b = z + c;
@@ -33,6 +41,9 @@ public class calcul {
                     b = z / c;
                 } else {
                     System.out.println("Output:");
+                    throw new RuntimeException(" калькулятор может использовать  только +, -, /, * ");
+
+
                 }
 
             } catch (ArrayIndexOutOfBoundsException r) {
